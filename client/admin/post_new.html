@@ -1,0 +1,51 @@
+<template name="post_new">
+    {{>header_admin}}
+
+    <div class="container">
+        <h1 class="page-header">
+            <strong>Admin create new post</strong>
+        </h1>
+
+        <p>
+            <a href="/admin" class="btn btn-success"><i class="glyphicon glyphicon-chevron-left"></i> back</a>
+        </p><br>
+
+        <form name="new-post" id="new-post">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="name">Titre</label>
+                        <input type="text" name="name" id="name" class="form-control" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="slug">Slug</label>
+                        <input type="text" name="slug" id="slug" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="content">Content</label>
+                        <textarea name="content" id="content" class="form-control"></textarea>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="online">online</label>
+                        <input type="checkbox" name="online" id="online">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" name="date" id="date" required>
+                    </div>
+                </div>
+            </div>
+            <input type="submit" class="btn btn-primary" value="Sauvegarder">
+
+        </form>
+
+    </div>
+</template>

@@ -1,0 +1,12 @@
+<template name="post_list">
+    {{>header}}
+
+    <div class="container">
+
+        <h1 class="page-header"><strong>Blog</strong></h1>
+
+        {{#each posts}}
+            <h3># <a href="/blog/{{slug}}"><strong>{{name}}</strong></a></h3>
+        {{/each}}
+    </div>
+</template>

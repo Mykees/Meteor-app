@@ -1,0 +1,26 @@
+<template name="login">
+
+    {{>header}}
+
+    <div class="container">
+        <h1 class="page-header">Login</h1>
+
+        <form class="login" id="login">
+            <div class="row">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" class="form-control">
+                </div>
+                <div class="form-group">
+                    <a href="/register">register</a>
+                </div>
+                <input type="submit" class="btn btn-primary" value="Se connecter">
+            </div>
+        </form>
+    </div>
+</template>

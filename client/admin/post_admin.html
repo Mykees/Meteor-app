@@ -1,0 +1,51 @@
+<template name="admin">
+    {{>header_admin}}
+
+    <div class="container">
+        <h1 class="page-header">
+            <strong>Admin Post List</strong>
+        </h1>
+
+        <p>
+            <a href="/admin/new_post" class="btn btn-success"><i class="glyphicon glyphicon-plus"></i> Add New Post</a>
+        </p>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>slug</th>
+                    <th>online</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+            {{#each posts}}
+                <tr>
+                    <td></td>
+                    <td>{{name}}</td>
+                    <td>{{slug}}</td>
+                    <td>
+                        {{#if online }}
+                            <span class="label label-success">
+                                online
+                            </span>
+                            {{else}}
+                            <span class="label label-danger">
+                                offline
+                            </span>
+                        {{/if}}
+                    </td>
+                    <td>
+                        <a href="/admin/{{_id}}/edit" class="btn btn-default">Edit</a>
+                        <a href="/admin/{{_id}}/delete" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+
+
+    </div>
+</template>
